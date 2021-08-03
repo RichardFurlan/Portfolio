@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Alfa Slab One', cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  background-color: #2ccff3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  box-shadow: 1px 3px 2px rgba(1, 1, 1, 0.5);
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+ul {
+  display: flex;
+  margin-right: 3rem;
+  list-style: none;
+}
+
+ul a {
+  display: block;
+  font-size: 1.6rem;
+  padding: 1.1rem;
+}
+
+ul a:hover {
+  background-color: #45567d;
+}
+
+a {
+  text-decoration: none;
+  color: azure;
+  margin: 1rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+@keyframes heading {
+  0% {
+    top: -500px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome-section > p {
+  font-size: 3rem;
+  font-weight: 200px;
+  font-style: italic;
+  color: #58d8f5;
+}
+
+h1 {
+  color: white;
+  font-size: 5rem;
+  font-weight: 500px;
+  line-height: 1.2em;
+  margin-bottom: 45px;
+  position: relative;
+  animation: heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+h2 {
+  font-size: 4.2rem;
+  color: white;
+}
+
+h1,
+h2 {
+  font-family: 'Righteous', cursive;
+  font-weight: 700;
+  text-align: center;
+  font-weight: bold;
+}
+
+.typewriter p {
+  color: #58d8f5;
+  font-family: monospace;
+  font-size: 1.68rem;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #be3144; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 4.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+.my-projects {
+  text-align: center;
+  padding: 10rem 2rem;
+  background-color: #1e3186;
+}
+
+/* Projection Section */
+
+.projects-section {
+  text-align: center;
+  padding: 15rem 3rem;
+  background: #465a88;
+}
+
+.projects-section-header {
+  max-width: 680px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.5rem solid white;
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 32.625em) {
+  .projects-section {
+    padding: 6rem 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .typewriter p {
+    font-size: 1.4rem;
+  }
+}
+
+.project {
+  background: #2d333a;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.code {
+  color: #2d333a;
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: #ff7f50;
+  font-weight: bolder;
+  font-size: 1.6rem;
+}
+
+.project-image {
+  height: calc(100% - 2.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 1.6rem;
+  padding: 0rem 0.2rem;
+}
+
+@media (max-width: 72.625em) {
+  .project-title {
+    font-size: 1.6rem;
+  }
+
+  .project:hover .code {
+    font-size: 1.6rem;
+  }
+}
+
+/* Contact */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background-color: #23282e;
+
+  color: white;
+}
+
+.contact-section-header > h2 {
+  font-size: 4rem;
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 2rem;
+  }
+}
+
+.contact-section-header > p {
+  font-style: italic;
+  font-family: 'Concert One', cursive;
+  margin-top: 1.3rem;
+
+  font-size: 1.6rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4.2rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 1.6rem;
+  text-shadow: 4px 4px 2px #3f3b3b;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(10px);
+  color: rgb(211, 202, 202);
+}
+
+/* footer */
+
+footer {
+  font-weight: 310px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.8rem;
+  background-color: #34393e;
+  border-top: 5px solid #58d8f5;
+
+  font-size: 1.3rem;
+  color: whitesmoke;
+}
+
+footer > p {
+  margin: 1.8rem;
+}
+
+footer i {
+  vertical-align: middle;
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

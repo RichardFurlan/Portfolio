@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/loteria.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Fredoka+One&family=Jomhuria&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" type = "text/css" href = "style.css">
+    <title>Sorteio</title>
+</head>
+<body>
+    <div class = "bg">
+        <div id = "modal" class = "closedModal">
+
+            <div class = "content">
+
+                <strong onclick = "closeModal()">X</strong>
+                <p>O número sorteado foi...</p>
+                <h2 class = "result" id = "result"></h2>
+                <button type = "button" onclick = "raffle()">Novo Sorteio</button>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+            <main>
+
+                <h1>Sorteio Automatizado</h1>
+                <p>Gerador de números para sorteios</p>
+
+            </main>
+
+            <section>
+
+                <h2>Insira quantos números seu sorteio tem</h2>
+                <small>A caixa dará um número entre 1 e o número que você fornecer</small>
+                <input type = "number" id = "number" placeholder = "   Exemplo : 27" required min ="0">
+                <button type = "button" onclick="raffle()">Sorteio!</button>
+
+            </section>
+
+        </div>
+    </div>
+
+    <script src = "script.js"></script>
+</body>
+</html>

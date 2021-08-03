@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+@keyframes growUp {
+  0% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'Fredoka One', cursive;
+  font-size: 60%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+label {
+  font-size: 2rem;
+}
+
+input {
+  font-size: 2rem;
+}
+
+button {
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 100%;
+  max-height: 100vh;
+
+  background: #fefefe;
+}
+
+.text-content {
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.text-content h1 {
+  font-family: 'Fredoka One', cursive;
+}
+
+.text-content img {
+  max-width: 100%;
+}
+
+.box-calculo {
+  background: #62e7ff;
+  border-radius: 4rem 0 0 0rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box-calculo img {
+  width: 25rem;
+  margin-top: 2rem;
+}
+
+.form {
+  margin-top: 2rem;
+  width: 90%;
+}
+
+.form .input-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.box-calculo label {
+  font-family: 'Fredoka One', cursive;
+  margin-bottom: 0.5rem;
+}
+
+.box-calculo input {
+  width: 100%;
+  height: 5.6rem;
+  background: #fafafc;
+
+  border: 0.1rem solid #e6e6f0;
+  box-sizing: border-box;
+  border-radius: 0.8rem;
+
+  text-align: center;
+}
+
+.box-calculo input::placeholder {
+  color: #9c98a6;
+}
+
+.box-calculo button {
+  width: 18.8rem;
+  height: 5.7rem;
+  background: #1e8ccc;
+  color: #fff;
+
+  border: none;
+  border-radius: 3.6rem;
+
+  text-align: center;
+  margin-top: 1rem;
+
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.box-calculo button:hover {
+  opacity: 0.9;
+}
+
+img:hover {
+  animation: growUp;
+  animation-duration: 1s;
+  animation-iteration-count: inherit;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: 2rem;
+}
+
+/* Css do resultado no Java Script */
+
+.result-info {
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+  color: #000;
+  width: 0 auto;
+  margin-top: 1.5rem;
+}
+
+.result-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.result-block img {
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  margin-right: 0.5rem;
+}
+
+.result-block p {
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+  color: rgb(44, 44, 44);
+}
+
+/* Desktop Responsivity */
+
+@media (min-width: 700px) {
+  * {
+    overflow: hidden;
+  }
+
+  .text-content h1 {
+    font-size: 4rem;
+    width: 50rem;
+  }
+
+  .box-calculo {
+    height: 100vh;
+    background: #3fd7f5;
+    border-radius: 4rem 0 0 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .form {
+    margin-top: 2rem;
+    width: 70%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 0;
+  }
+}
+
+/* Mobile Responsivity */
+
+@media (max-width: 700px) {
+  .box-calculo {
+    border-radius: 4rem 4rem 0 0;
+  }
+
+  #resultado {
+    width: 100%;
+  }
+
+  .result-info {
+    margin-bottom: 2rem;
+  }
+
+  .result-block {
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    width: 100%;
+  }
+}
